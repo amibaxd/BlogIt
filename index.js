@@ -33,7 +33,7 @@ app.post("/creating", (req,res) => {
     // const data = `<%- include("partials/header.ejs") %>\n<p>${content}</p>\n<%- include("partials/footer.ejs") %>`;
     // fs.writeFile(`views/pages/${title}.ejs`, data, {encoding: "utf-8"}, (err) => {
     //     if (err) throw err;
-    // })
+    // });
 
     // const dat = `\napp.get("/${title}", (req,res) => {res.render("/pages/${title}.ejs");})`
     // fs.appendFile("C:\\Users\\mithu\\OneDrive\\Desktop\\Backend\\4.5 Capstone Project\\index.js", dat, {encoding: "utf-8"}, (err) => {
@@ -43,7 +43,7 @@ app.post("/creating", (req,res) => {
     res.redirect("/");
 })
 
-app.get("/delete", (req,res) => {
+app.get("/delete/", (req,res) => {
     res.render("delete.ejs");
 })
 app.post("/deleting", (req,res) => {
@@ -69,7 +69,7 @@ app.post("/toupdate", (req,res) => {
             break;
         }
     }
-    
+
     res.render("toupdate.ejs",{
         title: titles[toEdit],
         content: contents[toEdit],
@@ -98,6 +98,16 @@ app.post("/toview", (req,res) => {
         content: contents[toView],
     })
 })
+
+app.get("/toview/:id", (req,res) => {
+    const index = req.params.id;
+
+    res.render("toview.ejs",{
+        title: titles[index],
+        content: contents[index],
+    })
+})
+
 app.get("/viewing", (req,res) => {
     res.redirect("/");
 })
