@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<h2><%= title %></h2>
+<p><%= content %></p>
+
+<form action="/viewing" method="GET">
+    <input type="submit" value="Back to main page">
+</form>
+
+<%- include("partials/footer.ejs") %>

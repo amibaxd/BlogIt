@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.titles.length !== 0){ %>
+    <p><strong>List of Blogs</strong></p>
+    <ul>
+        <% for(let i=0; i<titles.length; i++){ %>
+            <li><%= titles[i] %></li>
+        <% } %>
+    </ul>
+<% } else{ %>
+        <h2>No Blogs available</h2>
+    <% } %>
+<form action="/create" method="GET">
+    <input type="submit" value="Create Blog" class="button">
+</form>
+<form action="/delete" method="GET">
+    <input type="submit" value="Delete">
+</form>
+<form action="/edit" method="GET">
+    <input type="submit" value="Edit">
+</form>
+<form action="/view" method="GET">
+    <input type="submit" value="View">
+</form>
+
+
+
+
+<%- include("partials/footer.ejs") %>

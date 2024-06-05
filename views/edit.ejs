@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/toupdate" method="POST">
+    <label for="title">Enter title of note to edit</label>
+    <input type="text" id="title" name="title">
+    <input type="submit" value="Update">
+</form>
+
+<%- include("partials/footer.ejs") %>

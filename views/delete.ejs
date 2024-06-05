@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/deleting" method="POST">
+    <label for="delTitle">Type the title of the blog you want to delete</label>
+    <input type="text" id="delTitle" name="delTitle">
+    <input type="submit" value="Delete">
+</form>
+
+<%- include("partials/footer.ejs") %>
