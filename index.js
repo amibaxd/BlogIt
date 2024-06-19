@@ -91,7 +91,6 @@ app.post("/toview", (req,res) => {
             break;
         }
     }
-    console.log(`Index of element is ${toView}`);
 
     res.render("toview.ejs",{
         title: titles[toView],
