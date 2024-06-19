@@ -4,7 +4,7 @@
     <p><strong>List of Blogs</strong></p>
     <ul>
         <% for(let i=0; i<titles.length; i++){ %>
-            <% const v = `http://localhost:3000/toview/${i}` %>
+            <% const v = `/toview/${i}` %>
             <li><a href= <%= v %>><%= titles[i] %></a></li>
         <% } %>
     </ul>
